@@ -1,7 +1,7 @@
 <h2 class="text-white mb-3"><%= @restaurant.name %></h2>
 
 <div class="card-body shadow pt-3 pb-1 mb-2" style="background-color: #A2678A;">
-  <p class="text-dark text-white">Category: <%= @restaurant.category %></p>
+  <p class="text-dark text-white">Category: <%= @restaurant.category.capitalize %></p>
   <p class="text-dark text-white"><%= @restaurant.address %></p>
   <p class="text-dark text-white"><%= @restaurant.phone_number %></p>
 </div>
