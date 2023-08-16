@@ -1,14 +1,14 @@
 <h2 class="text-white mb-3"><%= @restaurant.name %></h2>
 
-<div class="card-body shadow pt-3 pb-1 mb-2" style="background-color: #A2678A;">
+<div class="card-body shadow pt-3 pb-1 mb-2" style="background-color: #4682A9;">
   <p class="text-dark text-white">Category: <%= @restaurant.category.capitalize %></p>
   <p class="text-dark text-white"><%= @restaurant.address %></p>
   <p class="text-dark text-white"><%= @restaurant.phone_number %></p>
 
 <div class="reviews-container overflow-auto" style="max-height: 200px;">
   <% @restaurant.reviews.each do |review| %>
-    <div class="card mb-2" style="border: 2px solid #F8F0E5; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-      <div class="card-body p-1" style="background-color: #252B48; border-radius: 10px;">
+    <div class="card mb-2" style="border: 2px solid #F6F4EB; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+      <div class="card-body p-1" style="background-color: #749BC2; border-radius: 10px;">
         <p class="mb-2"><strong>Rating:</strong> <%= review.rating %></p>
         <p class="mb-2"><%= review.content %></p>
       </div>
@@ -19,8 +19,8 @@
   <%= simple_form_for [@restaurant, @review] do |f| %>
     <%= f.input :content %>
     <%= f.input :rating, as: :radio_buttons, collection: 1..5, wrapper_html: { class: 'd-flex justify-content-between' }, item_wrapper_class: 'mx-3'%>
-    <%= f.submit class: "btn btn-danger my-2" %>
+    <%= f.submit class: "btn btn-light mt-2 mb-3" %>
   <% end %>
 </div>
 
-<%= button_to "Go Back", restaurants_path, method: :get, class: "btn btn-danger mt-2" %>
+<%= button_to "Go Back", restaurants_path, method: :get, class: "btn btn-light mt-2" %>
