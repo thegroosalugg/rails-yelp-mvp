@@ -3,6 +3,5 @@
   <%= f.input :address %>
   <%= f.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"], prompt: "Select a category" %>
   <%= f.input :phone_number %>
-  <%#= f.input :rating %>
-  <%= f.submit %>
+  <%= f.submit class: "btn btn-primary" %>
 <% end %>
