@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+/* Hide the scrollbar track and thumb */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Hide the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent; /* Hide the thumb */
+}
