@@ -6,15 +6,15 @@
   <p class="text-dark text-white"><%= @restaurant.phone_number %></p>
 
   <% if @restaurant.reviews.any? %>
-    <p class="text-dark text-white">Average Rating: <%= @restaurant.reviews.sum(:rating) / @restaurant.reviews.count %>/5</p>
+    <p class="text-dark text-white"><strong>Average Rating: <%= @restaurant.reviews.sum(:rating) / @restaurant.reviews.count %>/5</strong></p>
   <% end %>
 
   <div class="reviews-container overflow-auto" style="max-height: 200px;">
     <% @restaurant.reviews.each do |review| %>
       <div class="card p-0 mb-2" style="border: 2px solid #F6F4EB; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <div class="card-body p-1" style="background-color: #749BC2; border-radius: 10px;">
-          <p class="mb-2" style="font-size: 14px;"><strong>Rating:</strong> <%= review.rating %></p>
+        <div class="card-body px-3" style="background-color: #749BC2; border-radius: 10px;">
           <p class="mb-2" style="font-size: 14px;"><%= review.content %></p>
+          <p class="mb-2" style="font-size: 14px;"><strong><%= review.rating %>/5</strong></p>
         </div>
       </div>
     <% end %>
