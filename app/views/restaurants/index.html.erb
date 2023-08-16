@@ -1,2 +1,13 @@
-<h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+<h1>Restaurants Index</h1>
+<p>Got Munchies? Got Money? Go Get</p>
+<p class="small">"Disclaimer: if you do not have money then go home"</p>
+
+<% @restaurants.each do |restaurant| %>
+  <div class="card shadow mb-2 text-shadow-bold">
+    <div class="card-body py-1" style="background-color: #A2678A;">
+      <h4 class="mb-2"><%= link_to restaurant.name, restaurant_path(restaurant), class: "text-white text-decoration-none" %></h4>
+    </div>
+  </div>
+<% end %>
+
+<%= button_to "New restaurant", new_restaurant_path, method: :get, class: "btn btn-danger mt-3" %>
