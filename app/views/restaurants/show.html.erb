@@ -5,6 +5,7 @@
   <p class="text-dark text-white"><%= @restaurant.address %></p>
   <p class="text-dark text-white"><%= @restaurant.phone_number %></p>
 
+<div class="reviews-container overflow-auto" style="max-height: 200px;">
   <% @restaurant.reviews.each do |review| %>
     <div class="card shadow mb-2 text-shadow-bold">
       <div class="d-flex card-body py-1" style="background-color: #A2678A;">
@@ -13,7 +14,7 @@
       </div>
     </div>
   <% end %>
-
+</div>
 
   <%= simple_form_for [@restaurant, @review] do |f| %>
     <%= f.input :content %>
