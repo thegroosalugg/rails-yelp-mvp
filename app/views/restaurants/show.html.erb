@@ -13,7 +13,7 @@
     <% @restaurant.reviews.each do |review| %>
       <div class="card p-0 mb-2" style="border: 2px solid #F6F4EB; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
         <div class="card-body px-3" style="background-color: #749BC2; border-radius: 10px;">
-          <p class="mb-2" style="font-size: 14px; max-width: 300px;"><%= review.content %></p>
+          <p class="mb-2" style="font-size: 14px; width: 630px;"><%= review.content %></p>
         </div>
       </div>
     <p class="mb-4" style="font-size: 14px;"><strong><%= review.rating %>/5</strong></p>
