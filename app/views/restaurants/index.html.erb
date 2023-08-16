@@ -6,7 +6,7 @@
   <% @restaurants.each do |restaurant| %>
     <div class="card shadow mb-2 text-shadow-bold" style="border-radius: 10px;">
       <div class="card-body py-1" style="background-color: #4682A9; border-radius: 10px;">
-        <h4 class="mb-2"><%= link_to restaurant.name, restaurant_path(restaurant), class: "text-white text-decoration-none" %></h4>
+        <h6 class="mb-2"><%= link_to restaurant.name, restaurant_path(restaurant), class: "text-white text-decoration-none" %></h6>
       </div>
     </div>
   <% end %>
