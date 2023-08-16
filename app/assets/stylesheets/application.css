@@ -37,9 +37,10 @@
   border-color: #d8944b;
 }
 a {
+  border: 5px solid transparent;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-radius: 25px;
+  border-radius: 5px;
   transition: 0.5s;
   color: #fff;
 }
